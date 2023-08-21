@@ -1,0 +1,70 @@
+<div class="login-container bg-light" style="background-image: url('../../assets/background1.jpg');">
+  <div class="login-box text-center">
+    <h1 translate class="text-warning">FriendlyPet</h1>
+    <h4 translate class="text-white">Your pet-interest</h4>
+    <div class="container">
+      <div class="card col-md-6 mt-3 mx-auto">
+        <div class="card-body">
+          <h4 class="card-title text-center">
+            <i class="far fa-3x fa-user-circle text-muted"></i>
+          </h4>
+          <form class="form mt-4" [formGroup]="cadastroForm" (submit)="cadastrar()" novalidate>
+            <div class="m-3 form-group">
+              <label class="d-block my-3">
+                <input type="text" class="form-control" formControlName="name" autocomplete="name"
+                  [placeholder]="'Name'" />
+                <span hidden translate>Name</span>
+              </label>
+              <label class="d-block my-3">
+                <input type="text" class="form-control" formControlName="email" autocomplete="email"
+                  [placeholder]="'Email'" />
+                <span hidden translate>Email</span>
+                <small translate [hidden]="cadastroForm.controls.email.valid || cadastroForm.controls.email.untouched"
+                  class="text-danger" translate>
+                  Email is required
+                </small>
+                <div *ngIf="showMsgEmail">
+                  <p class="alert alert-warning">
+                    <strong>Remember to verify if your email is correct</strong>
+                  </p>
+                </div>
+              </label>
+              <label class="d-block mb-3">
+                <input type="password" class="form-control" formControlName="password" autocomplete="current-password"
+                  [placeholder]="'Password'" required />
+                <span hidden translate>Password</span>
+                <small [hidden]="cadastroForm.controls.password.valid || cadastroForm.controls.password.untouched"
+                  class="text-danger" translate>
+                  Password is required
+                </small>
+                <div *ngIf="showMsgEmail">
+                  <p class="alert alert-warning">
+                    <strong>Remember: password must be a least 8 characters including numbers</strong>
+                  </p>
+                </div>
+              </label>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="checkbox" class="form-check-input" formControlName="remember" />
+                  <span translate>Remember me</span>
+                </label>
+              </div>
+            </div>
+            <div class="m-3">
+              <button class="btn btn-primary w-100" type="submit" [disabled]="cadastroForm.invalid || isLoading">
+                <i class="fas fa-cog fa-spin" [hidden]="!isLoading"></i>
+                <span translate>Sign up</span>
+              </button>
+            </div>
+            <div *ngIf="showMsg">
+              <p class="alert alert-success">
+                <strong>Signup completed!</strong>
+              </p>
+            </div>
+          </form>
+          <p>Already registered?<a [routerLink]="['login']">Login</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

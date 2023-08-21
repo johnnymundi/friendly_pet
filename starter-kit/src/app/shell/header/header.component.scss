@@ -1,0 +1,56 @@
+@import "src/theme/theme-variables";
+
+.navbar {
+  margin-bottom: $spacer;
+  color: $indigo;
+}
+
+.nav-link.dropdown-toggle {
+  cursor: pointer;
+}
+
+.navbar-dark .navbar-brand {
+    /* color: #fff; */
+    font-size: 50px;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 2.5rem;
+    padding-left: -0.5rem;
+}
+
+.navbar-nav.navbar-center {
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+}
+
+.navbar-nav.navbar-right {
+  position: relative;
+  left: 90%;
+}
+
+.dropdown-header.dropdown-left {
+  right: 50%;
+}
+
+// loggin information
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav .dropdown-menu {
+      position: absolute;
+      right: 34px;
+  }
+}
+
+
+
+a.navbar-brand:hover {
+  transition: 0.4s;
+  color: #6FC1ED;
+}
+
+::ng-deep {
+.background-color {
+  background-color: #F6A131 !important;
+}
+}

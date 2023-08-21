@@ -1,0 +1,36 @@
+.content {
+  padding: 16px;
+}
+
+.content > mat-card {
+  width: 200px !important;
+}
+
+.content img {
+  width: 150px;
+}
+
+::ng-deep {
+  .game {
+    width: 350px;
+    margin: 20px;
+    height: 330px;
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 5px 6px 16px 4px #333333;
+    transition-duration: 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 15px 15px 15px 1px #F6A131;
+      transform: translateY(-4px);
+    }
+  }
+}
+
+.container-inner {
+  margin: auto;
+  width: 100%;
+  padding: 10px;
+}

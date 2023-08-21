@@ -1,0 +1,29 @@
+<div class="content">
+  <div fxLayout="row wrap" fxLayoutGap="grid" class="container-inner">
+    <div fxFlex="22.2%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let pet of pets.reverse(); let index = index"
+      class="game">
+
+      <app-cartao [title]="pet.title" [description]="pet.description" (click)="openDialog(pet._id)">
+
+        <p>
+          <app-pet [photoURL]="pet.url">
+          </app-pet>
+        </p>
+
+      </app-cartao>
+
+    </div>
+  </div>
+</div>
+
+<!-- <mat-grid-list cols="4" class="fill">
+  <mat-grid-tile *ngFor="let pet of pets; let index = index" class="fill">
+    <a (click)="photoIdteste(pet._id)" class="link-click">
+      <app-cartao>
+        <app-pet [photoURL]="pet.url" [description]="pet.description" [id]="pet._id">
+        </app-pet>
+      </app-cartao>
+    </a>
+
+  </mat-grid-tile>
+</mat-grid-list> -->

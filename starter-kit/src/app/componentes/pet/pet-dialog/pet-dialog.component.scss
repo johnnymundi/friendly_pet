@@ -1,0 +1,66 @@
+.photoconfig img {
+  height: 528px;
+  border-radius: 5%;
+  object-fit: fill !important;
+  width: 102%;
+  margin-top: 33px;
+}
+
+.title-config {
+  font-weight: 500;
+  padding-bottom: 30px;
+  font-size: 24px;
+}
+
+.container {
+  height: 70vh;
+}
+
+.trashcss {
+  position: absolute;
+  top: -1px;
+  left: 970px;
+
+  :hover {
+    color: red;
+  }
+}
+
+.heartcss {
+  :hover {
+    color: red;
+  }
+
+  :focus {
+    color: red;
+  }
+}
+
+.posted-by-css {
+  font-style: italic;
+  font-weight: 900px !important;
+  font-size: 16px;
+  margin-left: -5%;
+}
+
+
+
+.descriptioncss {
+  text-align: justify !important;
+  margin-top: 30px;
+  font-weight: 900;
+  font-size: 26px;
+}
+
+.description-content {
+  font-weight: 500;
+  font-size: 22px;
+}
+
+mat-dialog-actions {
+  padding: 0px 0 !important;
+}
+
+.fas {
+  color: red;
+}
