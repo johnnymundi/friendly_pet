@@ -13,9 +13,10 @@ MEAN Stack used
 [node-express-boilerplate](https://github.com/hagopj13/node-express-boilerplate) for the backend
 
 ### Usage
-clone or download the project
-open it in your editor
-use npm install to install all node modules
+- clone or download the project;
+- open it in your editor;
+- use npm install to install all node modules;
+
 
 for the starter-kit (frontend):
 npm start
